@@ -1,0 +1,12 @@
+ {
+ "deals": [
+   {
+     "businessLocation": "1400 Grand Avenue", 
+     "businessName": "Tea Garden", 
+     "description": "15% off till 15:00", 
+         "endtime": "Sat, 01 Mar 2014 06:29:05 GMT", 
+     "id": 1, 
+     "starttime": "Sat, 01 Mar 2014 03:29:05 GMT"
+   }
+ ]
+}

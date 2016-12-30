@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Category Lists</title>
+        <title>Maps page</title>
+         <script language="javascript"></script>
+             <script src="js/jquery/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+   <script type="text/javascript" language="javascript">
+   
+
+   	function doStuff() {
+    $.ajax({
+        type: 'GET',
+        url: 'http://giraffer.pythonanywhere.com/qr?qrcode=giraffe-tea',
+        async: false,
+        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function(data)
+        {
+            alert(data)
+        }
+    });
+}
+		
+		$.ajax({
+		type:"POST", 
+		url: "http://giraffer.pythonanywhere.com/qr?qrcode=giraffe-tea", 
+		jsonpCallback: 'myCallback',
+		success: function(data) {
+				                     
+		
+			}, 
+		error: function(jqXHR, textStatus, errorThrown) {
+				alert(jqXHR.status);
+			},
+	   dataType: "jsonp"
+		});
+            
+ </script>
+    </head>
+<title>the title</title>
+
+
+<body>
+	
+	<div id="navbar">
+		<div id="holder">
+			<ul>
+				<a href="deals.html">
+            	<img src="img/giraffe.jpg" width="100" height="60"></a></li>
+				
+         <a class="tab1"href="new.html">
+            <img src="img/heart.jpg" width="100" height="60"></a></li>
+            <a href="maps.html">
+            <img src="img/maps.jpg" width="100" height="60"></a></li>
+         <a href="profile.html">
+            <img src="img/profile1.jpg" width="100" height="60"></a></li>
+				
+
+			</ul>
+
+		</div>
+	</div>
+	<div style="width:500px;height:1000px;overflow:hidden;" >
+   <img src="img/teagarden.png" width="500px" height="auto">
+    
+   <a href="deal.html" onclick="doStuff()" class="classname">Confirm</a>
+
+    </div>
+  
+</body>
+</html>

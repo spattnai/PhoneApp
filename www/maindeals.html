@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" 
+   src="js/jquery/jquery-1.3.2.min.js"></script>
+   <script type="text/javascript" language="javascript">
+
+   $.ajax({
+    url: "http://giraffer.pythonanywhere.com/api/get-deals",
+ 
+    // the name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+ 
+    // tell jQuery we're expecting JSONP
+    dataType: "jsonp",
+ 
+    // tell YQL what we want and that we want JSON
+    data: {
+        q: "select title,abstract,url from search.news where query=\"cat\"",
+        format: "json"
+    },
+ 
+    // work with the response
+    success: function( response ) {
+        console.log( response ); // server response
+    }
+});
+   $.ajax({
+    url: "http://www.shopsatmsp.com/page/1/listing.jsp?topic=eat",
+ 
+    // the name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+ 
+    // tell jQuery we're expecting JSONP
+    dataType: "jsonp",
+ 
+    // tell YQL what we want and that we want JSON
+    data: {
+        q: "select title,abstract,url from search.news where query=\"cat\"",
+        format: "json"
+    },
+ 
+    // work with the response
+    success: function( response ) {
+        console.log( response ); // server response
+    }
+});
+
+   </script>
+</head>
+<body>
+	<div id="navbar">
+        <div id="holder">
+            <ul>
+                <a href="maindeals.html">
+                <img src="img/giraffe.jpg" width="100" height="60"></a></li>
+                
+         <a class="tab1"href="starred.html">
+            <img src="img/heart.jpg" width="100" height="60"></a></li>
+            <a href="maps.html">
+            <img src="img/maps.jpg" width="100" height="60"></a></li>
+         <a href="profile.html">
+            <img src="img/profile1.jpg" width="100" height="60"></a></li>
+                
+
+            </ul>
+
+        </div>
+    </div>
+   <p>Click on the button to load result.json file:</p>
+   <div id="stage" style="background-color:blue;">
+          DEALS
+   </div>
+   <input type="button" id="driver" value="Load Data" />
+</body>
+</html>
